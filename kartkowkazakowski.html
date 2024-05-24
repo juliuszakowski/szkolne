@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kartkowka</title>
+
+</head>
+<script>
+
+    function wynik(n) {
+    switch(n) {
+    case 0:
+    let p1 = document.querySelector('.p1').value;
+    let p2 = document.querySelector('.p2').value;
+    let p3 = document.querySelector('.p3').value;
+    let p4 = document.querySelector('.p4').value;
+
+
+     let wynik = document.querySelector('.wynik');
+     var w = (p1*p4)-(p3*p2);
+     wynik.style.display = 'flex';
+     wynik.innerHTML = 'Przeliczenie 2x2: ' + w;
+     break;
+     case 1:
+     let f1 = document.querySelector('.f1').value;
+     let f2 = document.querySelector('.f2').value;
+     let f3 = document.querySelector('.f3').value;
+     let f4 = document.querySelector('.f4').value;
+     let f5 = document.querySelector('.f5').value;
+     let f6 = document.querySelector('.f6').value;
+     let f7 = document.querySelector('.f7').value;
+     let f8 = document.querySelector('.f8').value;
+     let f9 = document.querySelector('.f9').value;
+     let wynik2 = document.querySelector('.wynik2');
+     var w2 = (f1*f5*f9)+(f2*f6*f7)+(f3*f4*f8) - (f7*f5*f3)+(f8*f6*f1)+(f9*f4*f2);
+     wynik2.style.display = 'flex';
+     wynik2.innerHTML = 'Przeliczenie 3x3: ' + w2;
+
+    break;
+    }
+    }
+
+</script>
+
+<style>
+    .wynik {
+    display: none;
+    font-size: 20px; 
+    font-weight: bold;
+    }
+    .wynik2 {
+     display: none;
+     font-size: 20px;
+     font-weight: bold;
+    }
+</style>
+<body>
+    <input type="form" placeholder="Podaj 1 liczbe" class="p1">
+    <input type="form" placeholder="Podaj 2 liczbe" class="p2">
+<br>
+    <input type="form" placeholder="Podaj 3 liczbe" class="p3">
+    <input type="form" placeholder="Podaj 4 liczbe" class="p4">
+<br>
+<br>
+    <button onclick="wynik(0)">wynik</button>
+    <p class="wynik"></p>   
+<br>
+<br>
+    <input type="form" placeholder="Podaj 1 liczbe" class="f1">
+    <input type="form" placeholder="Podaj 2 liczbe" class="f2">
+    <input type="form" placeholder="Podaj 3 liczbe" class="f3">
+<br>
+    <input type="form" placeholder="Podaj 4 liczbe" class="f4">
+    <input type="form" placeholder="Podaj 5 liczbe" class="f5">
+    <input type="form" placeholder="Podaj 6 liczbe" class="f6">
+<br>
+    <input type="form" placeholder="Podaj 7 liczbe" class="f7">
+    <input type="form" placeholder="Podaj 8 liczbe" class="f8">
+    <input type="form" placeholder="Podaj 9 liczbe" class="f9">
+<br>
+<br>
+    <button onclick="wynik(1)">wynik</button>
+    <p class="wynik2"></p>
+    
+</body>
+
+</html>
